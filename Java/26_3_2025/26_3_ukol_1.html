@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterace přes Hello</title>
+</head>
+<body>
+    <h1>Iterace přes řetězec "Hello"</h1>
+    <p>Jednotlivá písmena budou vypsána na samostatné řádky:</p>
+
+    <div id="output"></div> <!-- Div pro výpis výsledků -->
+
+    <script>
+        let str = "Hello"; // Řetězec k iteraci
+        let outputDiv = document.getElementById("output"); // HTML element pro výpis
+
+        for (let char of str) {
+            let paragraph = document.createElement("p"); // Vytvoření nového odstavce
+            paragraph.textContent = char; // Nastavení textu odstavce na aktuální písmeno
+            outputDiv.appendChild(paragraph); // Přidání odstavce do divu
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="utf-8">
+    <title>Výpočet plochy kruhu</title>
+</head>
+<body>
+
+<script>
+    // Požádání uživatele o zadání poloměru kruhu
+    let radius = Number(prompt("Zadejte poloměr kruhu (v centimetrech):"));
+
+    // Ověření, zda je zadán platný poloměr
+    if (!isNaN(radius) && radius > 0) {
+        let area = Math.PI * radius * radius; // Výpočet plochy kruhu pomocí Math.PI
+
+        // Výpis výsledku na stránku s jednotkami
+        document.write("Poloměr kruhu je: " + radius + " cm<br>");
+        document.write("Plocha kruhu je: " + area.toFixed(2) + " cm²");
+    } else {
+        document.write("Prosím, zadejte platné číslo pro poloměr.");
+    }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript – Podmínky a Funkce</title>
+</head>
+<body>
+    <h1>JavaScript – Podmínky a Funkce</h1>
+
+    <!-- Kontrola, zda je číslo kladné, záporné nebo nulové -->
+    <h2>Kontrola čísla</h2>
+    <input type="number" id="numberInput" placeholder="Zadejte číslo">
+    <button onclick="checkNumber()">Zkontrolovat číslo</button>
+    <p id="numberResult"></p>
+
+    <!-- Rozdělení uživatele dle věku -->
+    <h2>Rozdělení dle věku</h2>
+    <input type="number" id="ageInput" placeholder="Zadejte věk">
+    <button onclick="categorizeAge()">Rozdělit dle věku</button>
+    <p id="ageResult"></p>
+
+    <!-- Funkce na pozdrav -->
+    <h2>Pozdrav</h2>
+    <input type="text" id="nameInput" placeholder="Zadejte své jméno">
+    <button onclick="greet()">Pozdravit</button>
+    <p id="greetResult"></p>
+
+    <script>
+        // Funkce pro kontrolu čísla
+        function checkNumber() {
+            let number = document.getElementById("numberInput").value;
+            let result = "";
+
+            if (number > 0) {
+                result = "Číslo je kladné.";
+            } else if (number < 0) {
+                result = "Číslo je záporné.";
+            } else {
+                result = "Číslo je nulové.";
+            }
+
+            document.getElementById("numberResult").innerText = result;
+        }
+
+        // Funkce pro rozdělení dle věku
+        function categorizeAge() {
+            let age = document.getElementById("ageInput").value;
+            let category = "";
+
+            if (age < 12) {
+                category = "Dítě";
+            } else if (age < 18) {
+                category = "Teenager";
+            } else if (age <= 65) {
+                category = "Dospělý";
+            } else {
+                category = "Důchodce";
+            }
+
+            document.getElementById("ageResult").innerText = `Kategorie: ${category}`;
+        }
+
+        // Funkce na pozdrav
+        function greet() {
+            let name = document.getElementById("nameInput").value;
+
+            if (!name) {
+                name = "host"; // Pokud není zadáno jméno, použije se výchozí hodnota
+            }
+
+            let greetingMessage = `Ahoj, ${name}!`;
+            document.getElementById("greetResult").innerText = greetingMessage;
+        }
+    </script>
+</body>
+</html>

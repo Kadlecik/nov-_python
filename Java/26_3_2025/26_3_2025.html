@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cars = ["Toyota", "Honda", "Škoda", "BMW"];
+    console.log("Původní pole:", cars);
+
+    let removed = cars.splice(0, 1); // Odebere 1. prvek ("Toyota")
+    console.log("Odebrané auto:", removed);
+    console.log("Po odebrání:", cars);
+
+    let nove = ["VW", "Kia"];
+    cars.splice(2, 0, ...nove); // Přidá "VW" a "Kia" na 3. pozici (index 2)
+    console.log("Po přidání nových aut:", cars);
+</script>
+</body>
+</html>
